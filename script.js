@@ -1,9 +1,9 @@
 	var KekArray = [];
-	var body = document.getElementById('kekBody');
 	var tabl = document.createElement('table');
 	var tableBody = document.createElement('tbody');
 	function createTable()
 	{
+		var body = document.getElementById('kekBody');
 		var textNode = document.createTextNode('kek');
 		var row = document.createElement('tr');
 		var cell = document.createElement('td');

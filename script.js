@@ -18,8 +18,9 @@
 	{
 		var cell = document.createElement('td');
 		var cellnode = document.createTextNode('kke2');
+		var row = document.createElement('tr');
 		cell.appendChild(cellnode);
-		var insRow = tabl.insertRow();
+		var insRow = tabl.insertRow(row);
 		insRow.insertCell(cell);
 
 	}

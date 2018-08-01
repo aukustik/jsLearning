@@ -1,7 +1,7 @@
 	var KekArray = [];
 	var tabl = document.createElement('table');
 	var tableBody = document.createElement('tbody');
-	function createTable()
+	function createCell()
 	{
 		var body = document.getElementById('kekBody');
 		var textNode = document.createTextNode('kek');
@@ -14,7 +14,15 @@
 		body.appendChild(tabl);
 		tbl.setAttribute("border", "1");
 	}
-	
+	function createRow()
+	{
+		var cell = document.createElement('td');
+		var cellnode = document.createTextNode('kke2');
+		cell.appendChild(cellnode);
+		var insRow = tabl.insertRow();
+		insRow.insertCell(cell);
+
+	}
 	function TikatMihanuNaEbalo()
 	{
 		var list = document.getElementById('Arrays');

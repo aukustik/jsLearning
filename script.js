@@ -12,7 +12,7 @@
 		tableBody.appendChild(row);
 		tabl.appendChild(tableBody);
 		body.appendChild(tabl);
-		tbl.setAttribute("border", "1");
+		tabl.setAttribute("border", "1");
 	}
 	function createRow()
 	{

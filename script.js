@@ -18,9 +18,8 @@
 	{
 		var cellnode = document.createTextNode('kke2');
 		var row = document.createElement('tr');
-		cell.appendChild(cellnode);
 		var insRow = tabl.insertRow();
-		var cell = insRow.insertCell;
+		var cell = insRow.insertCell();
 		cell.appendChild(cellnode);
 
 	}
@@ -149,4 +148,3 @@
 		else
 			alert('Ne OK!');
 	}
-

@@ -6,9 +6,10 @@
 		var InputValue = document.getElementById('InputMerge').value;
 		Arr = InputValue.split(' ');
 		console.log(Arr);
+		n = Arr.length;
 		CopyArray(Arr, 0, Arr.length, ArrTemp);
-		TDSplitMerge(ArrTemp, 0, Arr.length, Arr);
-		console.log(ArrTemp);
+		TDSplitMerge(ArrTemp, 0, n, Arr);
+		console.log(Arr);
 	}
 
 	function TDSplitMerge(ArrayTemp, iBegin, iEnd, ArrayMain)
@@ -18,6 +19,7 @@
 		TDSplitMerge(ArrayMain, iBegin, iMiddle, ArrayTemp);
 		TDSplitMerge(ArrayMain, iMiddle, iEnd, ArrayTemp);
 		TopDownMerge(ArrayTemp, iBegin, iMiddle, iEnd, ArrayMain);
+		console.log(ArrayMain + ': kek');
 	}
 
 	function TopDownMerge(ArrayMain, iBegin, iMiddle, iEnd, ArrayTemp)
@@ -26,7 +28,7 @@
 		var j = iMiddle;
 		for (k = iBegin; k < iEnd; k++)
 		{
-			if (i < iMiddle && (j >= iEnd || ArrayMain[i]<=ArrayMain[j]))
+			if (i < iMiddle && (j >= iEnd || ArrayMain[i] <= ArrayMain[j]))
 			{
 				ArrayTemp[k] = ArrayMain[i];
 				i = i + 1;
